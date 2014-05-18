@@ -1,0 +1,11 @@
+
+#Eclipse的位置
+eclipse.path=
+#Eclipse的workspace目录
+eclipse.workspace=
+
+#SVN存放在本地的加密文件路径
+svn.auth.path=
+
+#要清除日志文件的工程地址
+clear.app.root.aaa=

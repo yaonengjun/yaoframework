@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="lib/velocity/antlr-2.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/avalon-logkit-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/jdom-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/log4j-1.2.12.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/maven-ant-tasks-2.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/werken-xpath-0.9.4.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/asm.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/hibernate3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate/3.0/jta.jar"/>
+	<classpathentry kind="lib" path="lib/spring-2.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/trsids-server.jar" sourcepath="lib/trsids-server_src.jar"/>
+	<classpathentry kind="lib" path="lib/httpunit/httpunit-1.7.jar" sourcepath="libsrc/httpunit/httpunit-1.7-src.zip"/>
+	<classpathentry kind="lib" path="lib/jasypt/jasypt-1.6.jar" sourcepath="libsrc/asypt/jasypt-1.6-sources.jar"/>
+	<classpathentry kind="lib" path="lib/lombok/v0.9.3/lombok.jar"/>
+	<classpathentry kind="lib" path="lib/extremetable/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.11.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-2.3.jar"/>
+	<classpathentry kind="lib" path="lib/extremetable/xercesImpl-2.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/extremetable/xml-apis-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/velocity-tools-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/velocity-tools-generic-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/velocity/velocity-tools-view-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jms/jms-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/trs/trsdev4_infra_jdk16.jar"/>
+	<classpathentry kind="lib" path="lib/jms/activemq-all-5.6.0.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

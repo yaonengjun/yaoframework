@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="common" basedir=".">
+
+	<property file="common.properties" />
+
+	<property name="eclipse.path" value="${eclipse.path}" />
+	<property name="eclipse.workspace" value="${eclipse.workspace}" />
+	<property name="svn.auth.path" value="${svn.auth.path}" />
+	<property name="clear.app.root.aaa" value="${clear.app.root.aaa}" />
+
+	<target name="clearLocalSvnAuthToken">
+		<echo>About to clear local SVN token in ${svn.auth.path}</echo>
+		<delete dir="${svn.auth.path}">
+			<include name="**/*" />
+		</delete>
+		<echo>Clear local SVN token successfully</echo>
+	</target>
+
+	<target name="clearLogFilesInEclipseProject">
+
+		<delete>
+			<fileset dir="${clear.app.root.aaa}" includes="**/trsids*.txt" />
+		</delete>
+
+	</target>
+
+</project>

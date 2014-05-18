@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- ====================================================================== 
+     2004-12-30 10:31:53                                                        
+
+     TRSIDS_Publish    
+     TRS身份服务器所有jar的打包，并拷贝一份到副本目录，便于制作提供给协作应用的介质。
+                   
+     liushen                                                                
+     ====================================================================== -->
+<project name="TRSIDS_Publish" default="Jar" basedir=".">
+	<property name="JarName" value="yaoframework" />
+	<property name="classes_java.dir" value="${basedir}/WebRoot/WEB-INF/classes" />
+	<property name="classes_java.dir" value="${basedir}/WebRoot/WEB-INF/classes" />
+	<property name="dist.war" value="${basedir}/dist/war" />
+
+	<target name="Jar">
+		<echo>build ${server}.jar from dir ${classes_java.dir}</echo>
+		<jar destfile="${basedir}/dist/jar/${JarName}.jar" update="true">
+			<fileset dir="${classes_java.dir}" id="serverJarFileSet">
+				<include name="**/*.*" />
+				<exclude name="*.xml" />
+			</fileset>
+		</jar>
+
+	</target>
+	
+	<target name="buildWar">
+			<war destfile="${dist.war}/yao.war" basedir="${basedir}/WebRoot" webxml="${basedir}/WebRoot/WEB-INF/web.xml" />
+	</target>
+
+
+</project>

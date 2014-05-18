@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 
+	package="com.trs.idm.data.bo">
+
+	<class name="com.trs.idm.data.bo.User" table="`IDSUSER`" proxy="User" dynamic-insert="true" dynamic-update="true">
+		<id name="userId" type="integer">
+			<column name="`USERID`"/>
+			<generator class="native"/>
+		</id>
+		<property name="userName" type="string" column="`USERNAME`" not-null="true" unique="true"/>
+		<property name="passwd" type="string" column="`USERPWD`" access="field" not-null="true"/>
+		<property name="email" type="string" column="`EMAIL`" not-null="true"/>
+		<property name="trueName" type="string" column="`TRUENAME`" />
+		<property name="creditID" type="string" column="`CREDITID`" length="18" />
+		<property name="nickName" type="string" column="`NICKNAME`"/>
+		<property name="actived" column="`ACTIVED`"/>
+		<property name="userRole" type="integer" column="`ROLE`" />
+		<property name="groupId" type="integer" column="`GROUPID`"/>
+		<property name="groupName" type="string" column="`GROUPNAME`"/>
+		<property name="mobile" type="string" column="`MOBILE`" />
+		<property name="tel" type="string" column="`TEL`" />
+		<property name="corpName" type="string" column="`CORPNAME`" />
+		<property name="relPerson" type="string" column="`RELPERSON`" />
+		<property name="fax" type="string" column="`FAX`" />
+		<property name="desc" type="string" column="`USERDESC`"/>
+ 		<property name="regFrom" type="string" column="`REGFLG`" />
+ 		<property name="caStr" type="string" column="`CASTR`" />
+		<property name="signature" type="string" column="`SIGNATURE`" access="field" />
+		<property name="uniqueLogin" column="`UNIQUELOGIN`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		<property name="createdDate" column="`CREATEDDATE`"/>
+		<property name="reversiblePasswd" column="`REVERSIBLEPASSWD`"/>
+		<property name="regIP" column="`REGIP`"/>
+		<property name="position" column="`POSITION`"/>
+		
+		<!-- Added in v3.0 3028 SP1--> 
+        <property name="createdDateAsLong" column="`CREATEDDATEASLONG`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		<property name="lastLoginDate" column="`LASTLOGINDATE`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		<property name="lastLogoutDate" column="`LASTLOGOUTDATE`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		
+		<!-- Added in v3.5 3500 -->
+		<property name="lastErrorPasswordDate" column="`LASTERRORPASSWORDDATE`"/>
+		<property name="lockUntilThisTime" column="`LOCKUNTILTHISTIME`"  access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		<property name="errorPasswordCounter" column="`ERRORPASSWORDCOUNTER`"  access="com.trs.idm.util.hb.SafeDirectPropertyAccessor" />
+		<property name="convertUserName" type="string" column="`CONVERTUSERNAME`"/>
+		<property name="firstName"  column="`FIRSTNAME`"/>
+		<property name="lastName"  column="`LASTNAME`" />
+		<property name="allowLoginByUserPwd"  column="`ALLOWLOGINBYUSERPWD`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor"/>
+		<property name="allowLoginByCA"  column="`ALLOWLOGINBYCA`" access="com.trs.idm.util.hb.SafeDirectPropertyAccessor"/>
+		
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true"><property column="IDSFLD_YAOCUSTOM007" generated="never" lazy="false" name="yaocustom007" not-null="false" optimistic-lock="true" type="java.lang.String" unique="false"/><property column="IDSFLD_YAOCUSTOM007" generated="never" lazy="false" name="yaocustom007" not-null="false" optimistic-lock="true" type="java.lang.String" unique="false"/><property column="IDSFLD_YAOCUSTOM007" generated="never" lazy="false" name="yaocustom007" not-null="false" optimistic-lock="true" type="java.lang.String" unique="false"/><property column="IDSFLD_YAOCUSTOM007" generated="never" lazy="false" name="yaocustom007" not-null="false" optimistic-lock="true" type="java.lang.String" unique="false"/><property column="IDSFLD_YAOCUSTOM007" generated="never" lazy="false" name="yaocustom007" not-null="false" optimistic-lock="true" type="java.lang.String" unique="false"/></dynamic-component>
+		
+<!--
+		<property name="signature" access="field" >
+			<column name="SIGNATURE" sql-type="nvarchar (255)" />
+		</property>
+ -->
+	</class>
+	
+</hibernate-mapping>

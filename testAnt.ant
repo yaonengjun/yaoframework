@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="Test" default="CallOtherAntTarget" basedir=".">
+
+	<!-- This will not success,yaonengjun@2010-03-23 -->
+	<target name="CallOtherAntTarget">
+		<echo>CallOtherAntTarget start...</echo>
+		<ant antfile="D:/1_Develop/2_WorkSpace/TRS/TRSIDS_Trunk_02/publish.xml" target="publishToJars"></ant>
+	</target>
+	
+	<!-- This can success,yaonengjun@2010-03-23 -->
+	<target name="CallAnotherAntFileInThisProject">
+			<echo>CallOtherAntTarget start...</echo>
+			<ant antfile="build.ant" target="Jar"></ant>
+		</target>
+		
+
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="TRSIDSAntUtil" basedir="D:/1_Develop/2_WorkSpace">
+
+	<property name="IDSProjectRoot" value="D:\1_Develop\2_WorkSpace\TRS\TRSIDS_Trunk" />
+	<property name="AppRoot" value="D:/2_Application/Tomcat-9090/webapps" />
+	<property name="App1Dir" value="${AppRoot}/sdsso" />
+	<property name="App2Dir" value="${AppRoot}/agentDemo1" />
+
+	<target name="CopyAgentToApp1">
+		<echo>about to copy trsids-ageng.jar and trsids-filter.jar to app1: ${App1Dir}/WEB-INF/lib </echo>
+		<copy todir="${App1Dir}/WEB-INF/lib" preservelastmodified="true" verbose="true">
+			<mapper type="flatten" />
+			<fileset dir="${IDSProjectRoot}">
+				<include name="trsids-agent.jar" />
+				<include name="trsids-filter.jar" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="CopyAgentToApp2">
+		<echo>about to copy trsids-ageng.jar and trsids-filter.jar to app1: ${App2Dir}/WEB-INF/lib </echo>
+		<copy todir="${App2Dir}/WEB-INF/lib" preservelastmodified="true" verbose="true">
+			<mapper type="flatten" />
+			<fileset dir="${IDSProjectRoot}">
+				<include name="trsids-agent.jar" />
+				<include name="trsids-filter.jar" />
+			</fileset>
+		</copy>
+	</target>
+</project>
