@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="GBK"?>
+<analysisKnowledges>
+	<analysisKnowledge>
+		<responseCode desc="正确，检查无误">40000</responseCode>
+		<adviceCodes>
+			<adviceCode desc="当前诊断结果正确，检查后续诊断流程是否正确!">50000</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="没有找到Agent配置文件">40001</responseCode>
+		<adviceCodes>
+			<adviceCode desc="上传协作应用端部署的IDS Agent配置文件">50001</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="没有找到HttpWatch XML格式日志文件!">40002</responseCode>
+		<adviceCodes>
+			<adviceCode desc="上传HttpWatch XML格式日志文件">50002</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中IDS身份服务器的IP配置错误!">40003</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改Agent配置文件配置项为实际IDS 的IP地址">50003</adviceCode>
+			<adviceCode desc="修改IDS 的IP地址为Agent配置文件中的配置值">50004</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中对应配置项没有配置">40004</responseCode>
+		<adviceCodes>
+			<adviceCode desc="按照集成手册配置项示例说明增加配置项">50005</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中IDS身份服务器的后台端口配置错误!">40005</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改Agent配置文件的后台端口配置项为实际IDS的后台端口值">50006</adviceCode>
+			<adviceCode desc="修改IDS 的后台端口值为Agent配置文件中的配置值">50007</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中协作应用名称配置错误!">40006</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改Agent配置文件中协作应用名称为实际在IDS注册的名称">50008</adviceCode>
+			<adviceCode desc="在IDS重新注册协作应用名称为Agent配置文件中的应用名">50009</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中actor配置错误!">40007</responseCode>
+		<adviceCodes>
+			<adviceCode desc="按照协作应用集成手册修改Agent配置文件中actor配置值">50010</adviceCode>
+			<adviceCode desc="按照协作应用集成手册修改actor协同类文件">50011</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="警告! Agent配置文件中配置了IDS提供的仅供示例使用的Actor!">40008</responseCode>
+		<adviceCodes>
+			<adviceCode desc="确认协作应用是否需要开发协同Actor，如协作应用是否有自己的用户库数据需要同步则不能使用示例Actor">50012</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent配置文件中LoginAction配置错误!">40009</responseCode>
+		<adviceCodes>
+			<adviceCode desc="根据协作应用集成手册示例说明修改Agent配置文件中LoginAction配置项的值">50013</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="用户首次访问协作应用没有向IDS身份服务器跳转!">42001</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查通知应用的URL地址是否被IDS Filter忽略">52001</adviceCode>
+			<adviceCode desc="检查协作应用名配置项是否是否与实际在IDS注册的协作应用名一致">52002</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="用户访问协作应用向IDS身份服务器第一次跳转失败!">42002</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查IDS SSO URL是否配置错误，确认IDS SSO URL是否是与实际IDS地址相符的URL">52003</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="应用未与IDS连接">41001</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查协作应用是否启动">51001</adviceCode>
+			<adviceCode desc="检查IDS与应用之间的DNS设置">51002</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="应用根地址为空">41002</responseCode>
+		<adviceCodes>
+			<adviceCode desc="配置应用根地址">51003</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="应用根地址不是有效的URL">41003</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改应用根地址为有效的URL">51004</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="应用根地址不应该以“/”结尾">41004</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改应用根地址，不能以“/”结尾">51005</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="通知应用URL为空">41005</responseCode>
+		<adviceCodes>
+			<adviceCode desc="配置通知应用URL">51006</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="通知应用URL不是有效的URL">41006</responseCode>
+		<adviceCodes>
+			<adviceCode desc="修改通知应用URL为正确的URL">51007</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="应用根地址不能被IDS用HTTP方式请求到">41007</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查应用根地址是否配置正确">51008</adviceCode>
+			<adviceCode desc="检查IDS与应用之间的DNS设置">51009</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="通知应用URL不能被IDS用HTTP方式请求到">41008</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查通知应用URL拼写是否错误">51010</adviceCode>
+			<adviceCode desc="检查IDS与应用之间的DNS设置">51011</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="通知应用的URL能被HTTP方式请求到，但响应结果错误，与预期不符">41009</responseCode>
+		<adviceCodes>
+			<adviceCode desc="请确认Agent配置文件中的应用名配置是否正确">51012</adviceCode>
+			<adviceCode desc="检查通知应用的URL地址是否被IDS Filter忽略">51013</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+	<analysisKnowledge>
+		<responseCode desc="Agent与IDS的Socket通讯不正常">41010</responseCode>
+		<adviceCodes>
+			<adviceCode desc="检查Server端和应用端的端口是否正确">51014</adviceCode>
+			<adviceCode desc="检查IDS和应用之间是否有其他设备干扰了通讯，例如防火墙等；">51015</adviceCode>
+		</adviceCodes>
+	</analysisKnowledge>
+</analysisKnowledges>

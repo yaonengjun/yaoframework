@@ -40,5 +40,7 @@
 	<classpathentry kind="lib" path="lib/jms/jms-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/trs/trsdev4_infra_jdk16.jar"/>
 	<classpathentry kind="lib" path="lib/jms/activemq-all-5.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/nosql/redis/jedis-2.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons/commons-pool-1.5.6.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
