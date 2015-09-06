@@ -6,7 +6,7 @@ import java.security.KeyStore;
 public class UseJavakeytoolProgramaticlly {
 	
 	/**
-	 * 创建一个KeyStore，生成咋ixiangm的根目录中
+	 * 创建一个KeyStore，生成在项目的根目录中
 	 * @throws Exception
 	 * @author neyao,2015年9月6日 下午4:49:26
 	 */
@@ -17,9 +17,11 @@ public class UseJavakeytoolProgramaticlly {
 		ks.load(null, password);
 
 		// Store away the keystore.
-		FileOutputStream fos = new FileOutputStream("MyTestKeyStoreFile");
+		FileOutputStream fos = new FileOutputStream("MyTestKeyStoreFile.jks");
 		ks.store(fos, password);
 		fos.close();
+		
+		System.out.println("Create a KeyStore success");
 	}
 	
 	public static void main(String[] args) {
